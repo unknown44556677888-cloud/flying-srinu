@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b8e7ff">
+  <meta name="description" content="A cheerful, photo-powered flying obstacle game.">
+  <title>Flying Srinu — sky challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Flying Srinu home"><span class="brand-mark">✦</span> SKY DAY</a>
+      <span class="top-note">A tiny flying adventure</span>
+    </header>
+    <section class="game-card" aria-label="Flying game">
+      <div class="game-heading">
+        <div><p class="eyebrow">READY, SET, FLOAT</p><h1>Flying Srinu</h1><p class="subheading">Tap or press Space to flap through the gates.</p></div>
+        <div class="scores"><div class="score-box"><span>SCORE</span><strong id="score">0</strong></div><div class="score-box best"><span>BEST</span><strong id="best">0</strong></div></div>
+      </div>
+      <div class="stage-wrap">
+        <canvas id="game" width="800" height="560" aria-label="Game area. Press Space or click to fly." role="img"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-card"><div class="cloud-icon">☁️</div><p class="eyebrow" id="overlay-eyebrow">YOUR SKY ADVENTURE</p><h2 id="overlay-title">Ready to fly?</h2><p id="overlay-copy">Help your friend weave between the floating gates.</p><button id="start-button" type="button">Let’s fly <span>→</span></button><p class="hint">Click, tap, or press <kbd>SPACE</kbd></p></div>
+        </div>
+        <div class="sound-state" id="sound-state">♪ FLIGHT AUDIO READY</div>
+      </div>
+      <div class="below-game"><p><span class="dot"></span> Click / tap / Space to fly <span class="separator">·</span> Avoid the gates <span class="separator">·</span> Beat your best</p><button class="quiet-button" id="sound-toggle" type="button" aria-pressed="false">Sound: on</button></div>
+    </section>
+    <footer><span>Made for a little friendly competition</span><span>Works in your browser · no install needed</span></footer>
+  </main>
+  <audio id="crash-audio" src="assets/crash-reaction.ogg" preload="auto"></audio>
+  <audio id="flight-audio" src="assets/flying-music.mp3" preload="none" loop></audio>
+  <script src="game.js"></script>
+</body>
+</html>
